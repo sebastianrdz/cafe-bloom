@@ -1,26 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --latte-beige: #f5e9da;
+  --coffee-brown: #2c1810;
+  --charcoal: #3a3a3a;
+  --soft-green: #8fb996;
+  --pastel-pink: #f4c2c2;
+  --cream: #fff8f0;
+  --warm-white: #fefefe;
+
+  /* Semantic Colors */
+  --background: var(--latte-beige);
+  --foreground: var(--coffee-brown);
+  --accent: var(--soft-green);
+  --accent-secondary: var(--pastel-pink);
+  --surface: var(--warm-white);
 }
 
 @theme inline {
+  /* Colors */
+  --color-latte: #f5e9da;
+  --color-coffee: #2c1810;
+  --color-charcoal: #3a3a3a;
+  --color-green: #8fb996;
+  --color-pink: #f4c2c2;
+  --color-cream: #fff8f0;
+  --color-white: #fefefe;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-surface: var(--surface);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Typography */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Spacing & Sizing */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--latte-beige);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--soft-green);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7da885;
 }
