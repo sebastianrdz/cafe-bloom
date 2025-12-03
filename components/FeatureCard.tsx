@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 interface FeatureCardProps {
   icon: string;
   title: string;
@@ -7,7 +9,12 @@ interface FeatureCardProps {
 
 const iconMap: Record<string, JSX.Element> = {
   coffee: (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg
+      className="w-8 h-8"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -17,7 +24,12 @@ const iconMap: Record<string, JSX.Element> = {
     </svg>
   ),
   workspace: (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg
+      className="w-8 h-8"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -27,7 +39,12 @@ const iconMap: Record<string, JSX.Element> = {
     </svg>
   ),
   dessert: (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg
+      className="w-8 h-8"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -37,7 +54,12 @@ const iconMap: Record<string, JSX.Element> = {
     </svg>
   ),
   service: (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg
+      className="w-8 h-8"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -68,4 +90,3 @@ export default function FeatureCard({
     </div>
   );
 }
-
