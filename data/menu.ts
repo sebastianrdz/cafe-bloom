@@ -172,7 +172,7 @@ export const getFeaturedItems = () => {
   return menuItems.filter((item) => item.featured);
 };
 
-export const getItemsByTag = (tag: MenuItem["tags"][number]) => {
+export const getItemsByTag = (tag: NonNullable<MenuItem["tags"]>[number]) => {
   return menuItems.filter((item) => item.tags?.includes(tag));
 };
 
